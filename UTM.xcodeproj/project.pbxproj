@@ -3260,7 +3260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = osy;
 				TargetAttributes = {
 					8401FD61269BE9C500265F0D = {
@@ -4379,10 +4379,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "$(IOS_CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY_IOS:default=Apple Development)";
+				DEVELOPMENT_TEAM = 8P75Y4G96Z;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Platform/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4404,10 +4405,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "$(IOS_CODE_SIGN_ENTITLEMENTS)";
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY_IOS:default=Apple Development)";
+				DEVELOPMENT_TEAM = 8P75Y4G96Z;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Platform/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4516,6 +4518,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -4550,7 +4553,7 @@
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-1",
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/libusb-1.0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib",
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib/gstreamer-1.0",
@@ -4594,6 +4597,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -4622,7 +4626,7 @@
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-1",
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/libusb-1.0",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib",
 					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib/gstreamer-1.0",
@@ -4633,6 +4637,7 @@
 				MTL_FAST_MATH = YES;
 				QUOTED_SYSROOT_DIR = "\"$(SYSROOT_DIR)\"";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYSROOT_DIR = "sysroot-$(PLATFORM_DISPLAY_NAME:identifier)$(PLATFORM_SUFFIX)-$(ARCHS:identifier)";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -4641,11 +4646,21 @@
 		CE9A353626533A52005077CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY_IOS:default=Apple Development)";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/gstreamer-1.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/glib-2.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib/glib-2.0/include",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-client-glib-2.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-1",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/libusb-1.0",
+					"$(PROJECT_DIR)/Headers/**",
+				);
 				INFOPLIST_FILE = JailbreakInterposer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4663,11 +4678,21 @@
 		CE9A353726533A52005077CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY_IOS:default=Apple Development)";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/gstreamer-1.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/glib-2.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/lib/glib-2.0/include",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-client-glib-2.0",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/spice-1",
+					"$(PROJECT_DIR)/$(QUOTED_SYSROOT_DIR)/include/libusb-1.0",
+					"$(PROJECT_DIR)/Headers/**",
+				);
 				INFOPLIST_FILE = JailbreakInterposer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4697,7 +4722,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Platform/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4729,7 +4754,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Platform/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

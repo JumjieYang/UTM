@@ -16,7 +16,7 @@
 
 #include <TargetConditionals.h>
 #if !TARGET_OS_SIMULATOR
-#include <IOKit/IOKitLib.h>
+#include "IOKitLib.h"
 #include <unistd.h>
 
 extern int proc_pidinfo(int pid, int flavor, uint64_t arg, void *buffer, int buffersize);
